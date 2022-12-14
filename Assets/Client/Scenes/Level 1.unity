@@ -219,8 +219,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 698630410}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+      - m_Target: {fileID: 698630409}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: End
         m_Mode: 1
         m_Arguments:
@@ -534,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382277653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1028,10 +1028,9 @@ GameObject:
   - component: {fileID: 698630407}
   - component: {fileID: 698630409}
   - component: {fileID: 698630408}
-  - component: {fileID: 698630410}
   m_Layer: 0
   m_Name: Utils
-  m_TagString: Untagged
+  m_TagString: Utils
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,22 +1075,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsText: {fileID: 1685052545}
-  rooms: []
+  rooms:
+  - {fileID: 9159011901544413790, guid: a269ed18fe76ea649b9b4b5455ad15d8, type: 3}
   endRoom: {fileID: 9159011901544413790, guid: 71a9d0da8d0824142b219155c7005a3b, type: 3}
   roomsSpawnLimit: 10
   roomsSpawned: 0
---- !u!114 &698630410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698630406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42c1fa7301f947498e4ce9e884f6a91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  pause: 0
 --- !u!1 &735007455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,8 +1223,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 698630410}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+      - m_Target: {fileID: 698630409}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
@@ -1723,8 +1712,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 698630410}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+      - m_Target: {fileID: 698630409}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -1830,10 +1819,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 30, y: 5}
+    - - {x: 50, y: 5}
       - {x: -9.7, y: 5}
       - {x: -9.7, y: -4.9}
-      - {x: 30, y: -4.9}
+      - {x: 50, y: -4.9}
 --- !u!1 &1325906024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,14 +2354,6 @@ MonoBehaviour:
   speed: 1
   damage: 100
   enemyHealth: {fileID: 1708293802}
-  rb: {fileID: 0}
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  playerLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheck: {fileID: 0}
 --- !u!61 &1708293804
 BoxCollider2D:
   m_ObjectHideFlags: 0
