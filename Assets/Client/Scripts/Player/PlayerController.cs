@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 			OnCrouchEvent = new BoolEvent();
 	}
 	
-	private void Start()
+	public void Start()
 	{
 		InitPlayerParams();
 	}
@@ -277,8 +277,14 @@ public class PlayerController : MonoBehaviour
 	{
 		canDoubleJump = doubleJump;
 	}
-
-
+	public float GetDashCooldown()
+    {
+		return dashCooldown;
+    }
+	public void SetDashCooldown(float value)
+	{
+		dashCooldown = value;
+	}
 
 	private void Flip()
 	{
